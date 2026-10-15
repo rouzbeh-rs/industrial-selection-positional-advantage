@@ -1,28 +1,16 @@
 # Positional Advantage Under Industrial Selection in Scientific Networks
 
-Code for the Bayesian agent-based simulations and figure generation reported in the accompanying paper.
-
-## Overview
-
-This repository contains the simulation code used to investigate how the network position of an industrially selected researcher affects group credences in epistemic communities. The model builds on Holman and Bruner's (2017) industrial selection framework and uses a Moran process to model generational mentorship dynamics across 10 network topologies.
+Bayesian agent-based simulations investigating how network position moderates the effectiveness of industrial selection in epistemic communities.
 
 ## Files
 
-- `experiment_script.py` — Main simulation engine. Runs all experimental phases (baseline position comparison, symmetric controls, Moran ablation, temporal dynamics), performs statistical analysis, and generates results.
-- `figure_generation.py` — Generates the figures reported in the paper.
+- `experiment_script.py` — Main simulation engine (baseline position comparison, symmetric controls, Moran ablation, temporal dynamics)
+- `modified-experiment.py` — Robustness checks: stripped-down model variants (Section 5.5 and Appendix A)
+- `figure_generation.py` — Figure generation
 
 ## Dependencies
 
-- Python 3.8+
-- NumPy
-- Pandas
-- NetworkX
-- SciPy
-- Matplotlib
-- tqdm
-- pingouin
-
-Install all dependencies with:
+Python 3.8+ with: NumPy, Pandas, NetworkX, SciPy, Matplotlib, tqdm, pingouin
 
 ```bash
 pip install numpy pandas networkx scipy matplotlib tqdm pingouin
@@ -30,15 +18,9 @@ pip install numpy pandas networkx scipy matplotlib tqdm pingouin
 
 ## Usage
 
-Run the full experiment:
-
 ```bash
 python experiment_script.py
-```
-
-Generate figures:
-
-```bash
+python modified-experiment.py
 python figure_generation.py
 ```
 
